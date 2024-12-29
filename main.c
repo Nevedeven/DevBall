@@ -2,10 +2,13 @@
 #include <math.h>
 #include "raymath.h"
 #include <stdio.h>
-//#include <dc/sound/sfxmgr.h>
-//#include <dc/sound/sound.h>
-//#include <dc/sound/stream.h>
-//#include <stdint.h>
+#include <kos.h>
+#include <adx/adx.h>
+#include <adx/snddrv.h>
+#include <dc/sound/sfxmgr.h>
+#include <dc/sound/sound.h>
+#include <dc/sound/stream.h>
+#include <stdint.h>
 
 #define PLAYER_LIVES 5
 #define BRICKS_LINES 5
@@ -17,10 +20,10 @@
 
 typedef enum GameScreen { LOGO=0, TITLE, GAMEPLAY, ENDING} GameScreen;
 
-//static sfxhnd_t sfx_bounce;
-//static sfxhnd_t sfx_hit;
-//static sfxhnd_t sfx_lose;
-//static sfxhnd_t sfx_win;
+static sfxhnd_t sfx_bounce;
+static sfxhnd_t sfx_hit;
+static sfxhnd_t sfx_lose;
+static sfxhnd_t sfx_win;
 
 typedef struct Paddle
 {
@@ -70,11 +73,11 @@ void colorLerping()
 
 int main(void)
 {
-    //snd_stream_init();
-    //sfx_bounce = sfxmgr_load("rd/bounce.wav");
-    //sfx_hit = sfxmgr_load("rd/hit.wav");
-    //sfx_lose = sfxmgr_load("rd/lose.wav");
-    //sfx_win = sfxmgr_load("rd/win.wav");
+    snd_stream_init();
+    sfx_bounce = snd_sfx_load("rd/bounce.wav");
+    sfx_hit = snd_sfx_load("rd/hit.wav");
+    sfx_lose = snd_sfx_load("rd/lose.wav");
+    sfx_win = snd_sfx_load("rd/win.wav");
     InitWindow(screenWidth, screenHeight, "DevBall");
     GameScreen CurrentScreen = LOGO;
     int framesCounter = 0;

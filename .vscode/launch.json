@@ -14,6 +14,14 @@
             "request": "launch",
             "command": "sudo dc-tool-ip -t 10.0.0.250 -x build/ChaoGen.elf",
             "preLaunchTask": "CMake: build"
+        },
+        {
+
+            "name": "Build&Serial",
+            "type": "f5anything",
+            "request": "launch",
+            "command": " sh-elf-objcopy -O binary build/ChaoGen.elf build/ChaoGen.bin &&  ftdi_transfer.sh build/ChaoGen.bin",
+            "preLaunchTask": "CMake: build"
         }
     ]
 }

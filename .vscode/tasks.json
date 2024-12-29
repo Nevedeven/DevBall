@@ -35,6 +35,18 @@
                 "clear": true
             },
             "command": "make && dctool ChaoGen.elf"
+        },
+        {
+            "label": "Build&Serial",
+            "type": "shell",
+            "isBackground": true,
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "clear": true
+            },
+            "command": "make && sh-elf-objcopy -O binary ChaoGen.elf ChaoGen.bin &&  ftdi_transfer.sh ChaoGen.bin"
         }
     ]
 }
