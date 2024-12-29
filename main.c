@@ -91,10 +91,10 @@ void colorLerping()
 int main(void)
 {
     snd_stream_init();
-    sfx_bounce = snd_sfx_load("rd/bounce.wav");
-    sfx_hit = snd_sfx_load("rd/hit.wav");
-    sfx_lose = snd_sfx_load("rd/lose.wav");
-    sfx_win = snd_sfx_load("rd/win.wav");
+    sfx_bounce = snd_sfx_load("rd/audio/bounce.wav");
+    sfx_hit = snd_sfx_load("rd/audio/hit.wav");
+    sfx_lose = snd_sfx_load("rd/audio/lose.wav");
+    sfx_win = snd_sfx_load("rd/audio/win.wav");
     InitWindow(screenWidth, screenHeight, "DevBall");
     GameScreen CurrentScreen = LOGO;
     int framesCounter = 0;

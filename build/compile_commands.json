@@ -1,12 +1,14 @@
 [
 {
-  "directory": "/home/neved/Documents/GitHub/DevBall/build",
-  "command": "/opt/toolchains/dc/kos/utils/build_wrappers/kos-cc --sysroot=/opt/toolchains/dc/kos/../kos-ports -I/opt/toolchains/dc/kos/../kos-ports/include/raylib -g -DFRAME_POINTERS -fno-omit-frame-pointer -std=gnu2x -o CMakeFiles/ChaoGen.dir/main.c.obj -c /home/neved/Documents/GitHub/DevBall/main.c",
-  "file": "/home/neved/Documents/GitHub/DevBall/main.c"
+  "directory": "/Users/cyp/Documents/DevBall/build",
+  "command": "/opt/toolchains/dc/kos/utils/build_wrappers/kos-cc --sysroot=/opt/toolchains/dc/kos/../kos-ports -I/opt/toolchains/dc/kos/../kos-ports/include/raylib -g -std=gnu2x -DFRAME_POINTERS -fno-omit-frame-pointer -o CMakeFiles/ChaoGen.dir/main.c.obj -c /Users/cyp/Documents/DevBall/main.c",
+  "file": "/Users/cyp/Documents/DevBall/main.c",
+  "output": "CMakeFiles/ChaoGen.dir/main.c.obj"
 },
 {
-  "directory": "/home/neved/Documents/GitHub/DevBall/build",
-  "command": "/opt/toolchains/dc/kos/utils/build_wrappers/kos-cc --sysroot=/opt/toolchains/dc/kos/../kos-ports -I/opt/toolchains/dc/kos/../kos-ports/include/raylib -g -DFRAME_POINTERS -fno-omit-frame-pointer -std=gnu2x -o CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj -c /home/neved/Documents/GitHub/DevBall/build/romdisk_tmp.c",
-  "file": "/home/neved/Documents/GitHub/DevBall/build/romdisk_tmp.c"
+  "directory": "/Users/cyp/Documents/DevBall/build",
+  "command": "/opt/toolchains/dc/kos/utils/build_wrappers/kos-cc --sysroot=/opt/toolchains/dc/kos/../kos-ports -I/opt/toolchains/dc/kos/../kos-ports/include/raylib -g -std=gnu2x -DFRAME_POINTERS -fno-omit-frame-pointer -o CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj -c /Users/cyp/Documents/DevBall/build/romdisk_tmp.c",
+  "file": "/Users/cyp/Documents/DevBall/build/romdisk_tmp.c",
+  "output": "CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj"
 }
 ]
