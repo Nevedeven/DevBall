@@ -1,11 +1,12 @@
-# ninja log v6
-1	16	1735513372965277089	/Users/cyp/Documents/DevBall/build/CMakeFiles/cmake.verify_globs	95cf31a2bbb44e6f
-16	19	1735513372979658405	clean	1f0117926fe85a19
-0	6	1735513373002732671	/Users/cyp/Documents/DevBall/build/CMakeFiles/cmake.verify_globs	95cf31a2bbb44e6f
-6	12	1735513373013662442	romdisk.img	e3d254cc27064df
-6	12	1735513373013662442	/Users/cyp/Documents/DevBall/build/romdisk.img	e3d254cc27064df
-12	74	1735513373075819103	romdisk_tmp.c	a68df91cf31d846d
-12	74	1735513373075819103	/Users/cyp/Documents/DevBall/build/romdisk_tmp.c	a68df91cf31d846d
-74	238	1735513373076376485	CMakeFiles/ChaoGen.dir/main.c.obj	986392c8c3937532
-74	765	1735513373076578072	CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj	574fefe28a7acdd3
-765	821	1735513373768141533	ChaoGen.elf	fb39f819ad6365fe
+# ninja log v5
+0	4	0	/home/neved/Documents/GitHub/DevBall/build/CMakeFiles/cmake.verify_globs	cc3e01879268dcdc
+0	1	0	clean	a31eedcededa8236
+0	5	0	/home/neved/Documents/GitHub/DevBall/build/CMakeFiles/cmake.verify_globs	cc3e01879268dcdc
+0	1	1735514285770712702	romdisk.img	c08651b3dc95dfc8
+0	1	1735514285770712702	/home/neved/Documents/GitHub/DevBall/build/romdisk.img	c08651b3dc95dfc8
+1	42	1735514285810713174	romdisk_tmp.c	97745ec6e544168a
+1	42	1735514285810713174	/home/neved/Documents/GitHub/DevBall/build/romdisk_tmp.c	97745ec6e544168a
+42	168	1735514285934714633	CMakeFiles/ChaoGen.dir/main.c.obj	fc9c3073b986dbfe
+42	971	1735514286738724102	CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj	4ad7b17c8046bf43
+971	1008	1735514286774724525	ChaoGen.elf	fdf2693c3e848ddc
+0	4	0	/home/neved/Documents/GitHub/DevBall/build/CMakeFiles/cmake.verify_globs	cc3e01879268dcdc

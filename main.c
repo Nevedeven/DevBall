@@ -25,6 +25,23 @@ static sfxhnd_t sfx_hit;
 static sfxhnd_t sfx_lose;
 static sfxhnd_t sfx_win;
 
+void playBounce()
+{
+    snd_sfx_play(sfx_bounce, 12, 128);
+}
+void playHit()
+{
+    snd_sfx_play(sfx_hit, 12, 128);
+}
+void playLose()
+{
+    snd_sfx_play(sfx_lose, 12, 128);
+} 
+   void playWin()
+{
+    snd_sfx_play(sfx_win, 12, 128);
+}   
+
 typedef struct Paddle
 {
     Vector2 position;
@@ -163,18 +180,18 @@ int main(void)
                         if ((ball.position.x-ball.radius <= 0 && ball.speed.x < 0) || (ball.position.x+ball.radius >= screenWidth && ball.speed.x > 0)) 
                         {
                             ball.speed.x *= -1;
-                            //snd_sfx_play(sfx_bounce, 12, 128);
+                            playBounce();
                         }
                         if (ball.position.y-ball.radius <= 0) 
                         {
                             ball.speed.y *= -1;
-                            //snd_sfx_play(sfx_bounce, 12, 128);
+                            playBounce();
                         }
                         if (CheckCollisionCircleRec(ball.position, ball.radius, paddle.bounds) && ball.speed.y > 0)
                         {
                             ball.speed.y *= -1;
                             ball.speed.x = 5*(ball.position.x - (paddle.position.x + paddle.size.x/2))/paddle.size.x;
-                            //snd_sfx_play(sfx_bounce, 12, 128);
+                            playBounce();
                         }
                         for (int j = 0; j < BRICKS_LINES; j++)
                         {
@@ -182,7 +199,7 @@ int main(void)
                             {
                                 if (bricks[j][i].active && (CheckCollisionCircleRec(ball.position, ball.radius, bricks[j][i].bounds)))
                                 {
-                                    //snd_sfx_play(sfx_hit, 12, 128);
+                                    playHit();
                                     bricks[j][i].active = false;
                                     if(ball.position.y <= bricks[j][i].position.y-8 || ball.position.y >= bricks[j][i].position.y+8 + bricks[j][i].size.y)
                                     {
@@ -207,7 +224,7 @@ int main(void)
                         if (paddle.lives <= 0)
                         {
                             gameresult = 0;
-                            //snd_sfx_play(sfx_lose, 12, 128);
+                            playLose();
                             CurrentScreen = ENDING;
                             paddle.lives = PLAYER_LIVES;
                             framesCounter = 0;
@@ -224,7 +241,7 @@ int main(void)
                     if (brickCount <= 0)
                     {
                         gameresult = 1;
-                        //snd_sfx_play(sfx_win, 12, 128);
+                        playWin();
                         CurrentScreen = ENDING;
                         framesCounter = 0;
                     }
