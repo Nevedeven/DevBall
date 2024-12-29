@@ -14,13 +14,16 @@
 			"target_link_options",
 			"kos_add_romdisk",
 			"target_link_libraries",
+			"add_compile_options",
+			"include",
 			"include_directories",
 			"target_sources"
 		],
 		"files" : 
 		[
 			"CMakeLists.txt",
-			"/opt/toolchains/dc/kos/utils/cmake/dreamcast.cmake"
+			"/opt/toolchains/dc/kos/utils/cmake/dreamcast.cmake",
+			"/opt/toolchains/dc/kos/utils/cmake/dreamcast.toolchain.cmake"
 		],
 		"nodes" : 
 		[
@@ -52,13 +55,29 @@
 				"parent" : 0
 			},
 			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"file" : 2,
+				"parent" : 5
+			},
+			{
 				"command" : 4,
+				"file" : 2,
+				"line" : 72,
+				"parent" : 6
+			},
+			{
+				"command" : 6,
 				"file" : 0,
 				"line" : 9,
 				"parent" : 0
 			},
 			{
-				"command" : 5,
+				"command" : 7,
 				"file" : 1,
 				"line" : 101,
 				"parent" : 2
@@ -71,13 +90,24 @@
 			"compileCommandFragments" : 
 			[
 				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-DFRAME_POINTERS"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fno-omit-frame-pointer"
+				},
+				{
 					"fragment" : "-std=gnu2x"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 5,
+					"backtrace" : 8,
 					"path" : "/opt/toolchains/dc/kos/../kos-ports/include/raylib"
 				}
 			],
@@ -106,6 +136,10 @@
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "",
 				"role" : "flags"
@@ -192,7 +226,7 @@
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 6,
+			"backtrace" : 9,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/romdisk_tmp.c",

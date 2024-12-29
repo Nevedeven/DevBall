@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: ChaoGen
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__ChaoGen_
+rule C_COMPILER__ChaoGen_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = /opt/toolchains/dc/kos/utils/build_wrappers/kos-cc --sysroot=/opt/toolchains/dc/kos/../kos-ports $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule C_COMPILER__ChaoGen_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__ChaoGen_
+rule C_EXECUTABLE_LINKER__ChaoGen_Debug
   command = $PRE_LINK && /opt/toolchains/dc/kos/utils/build_wrappers/kos-cc --sysroot=/opt/toolchains/dc/kos/../kos-ports $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT

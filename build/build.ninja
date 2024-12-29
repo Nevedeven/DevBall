@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: ChaoGen
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -20,6 +20,11 @@
 
 ninja_required_version = 1.8
 
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -44,18 +49,18 @@ cmake_ninja_workdir = /home/neved/Documents/GitHub/DevBall/build/
 
 build cmake_object_order_depends_target_ChaoGen: phony || romdisk.img romdisk_tmp.c
 
-build CMakeFiles/ChaoGen.dir/main.c.obj: C_COMPILER__ChaoGen_ /home/neved/Documents/GitHub/DevBall/main.c || cmake_object_order_depends_target_ChaoGen
+build CMakeFiles/ChaoGen.dir/main.c.obj: C_COMPILER__ChaoGen_Debug /home/neved/Documents/GitHub/DevBall/main.c || cmake_object_order_depends_target_ChaoGen
   DEP_FILE = CMakeFiles/ChaoGen.dir/main.c.obj.d
-  FLAGS = -std=gnu2x
+  FLAGS = -g -DFRAME_POINTERS -fno-omit-frame-pointer -std=gnu2x
   INCLUDES = -I/opt/toolchains/dc/kos/../kos-ports/include/raylib
   OBJECT_DIR = CMakeFiles/ChaoGen.dir
   OBJECT_FILE_DIR = CMakeFiles/ChaoGen.dir
   TARGET_COMPILE_PDB = CMakeFiles/ChaoGen.dir/
   TARGET_PDB = ChaoGen.pdb
 
-build CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj: C_COMPILER__ChaoGen_ /home/neved/Documents/GitHub/DevBall/build/romdisk_tmp.c || cmake_object_order_depends_target_ChaoGen
+build CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj: C_COMPILER__ChaoGen_Debug /home/neved/Documents/GitHub/DevBall/build/romdisk_tmp.c || cmake_object_order_depends_target_ChaoGen
   DEP_FILE = CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj.d
-  FLAGS = -std=gnu2x
+  FLAGS = -g -DFRAME_POINTERS -fno-omit-frame-pointer -std=gnu2x
   INCLUDES = -I/opt/toolchains/dc/kos/../kos-ports/include/raylib
   OBJECT_DIR = CMakeFiles/ChaoGen.dir
   OBJECT_FILE_DIR = CMakeFiles/ChaoGen.dir
@@ -70,7 +75,8 @@ build CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj: C_COMPILER__ChaoGen_ /home/neved
 #############################################
 # Link the executable ChaoGen.elf
 
-build ChaoGen.elf: C_EXECUTABLE_LINKER__ChaoGen_ CMakeFiles/ChaoGen.dir/main.c.obj CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj
+build ChaoGen.elf: C_EXECUTABLE_LINKER__ChaoGen_Debug CMakeFiles/ChaoGen.dir/main.c.obj CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj
+  FLAGS = -g
   LINK_FLAGS = -Wl,--whole-archive -lromdiskbase -Wl,--no-whole-archive
   LINK_LIBRARIES = -lraylib  -lGL  -lm  -lz  -lADX
   OBJECT_DIR = CMakeFiles/ChaoGen.dir

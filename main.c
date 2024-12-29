@@ -27,19 +27,19 @@ static sfxhnd_t sfx_win;
 
 void playBounce()
 {
-    snd_sfx_play(sfx_bounce, 12, 128);
+    snd_sfx_play(sfx_bounce, 120, 128);
 }
 void playHit()
 {
-    snd_sfx_play(sfx_hit, 12, 128);
+    snd_sfx_play(sfx_hit, 120, 128);
 }
 void playLose()
 {
-    snd_sfx_play(sfx_lose, 12, 128);
+    snd_sfx_play(sfx_lose, 120, 128);
 } 
    void playWin()
 {
-    snd_sfx_play(sfx_win, 12, 128);
+    snd_sfx_play(sfx_win, 120, 128);
 }   
 
 typedef struct Paddle
