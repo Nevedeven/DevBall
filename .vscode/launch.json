@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Build and launch Flycast",
+            "type": "f5anything",
+            "request": "launch",
+            "command": "flycast build/ChaoGen.elf",
+            "preLaunchTask": "CMake: build"
+        },
+        {
+            "name": "Build&PushToDC",
+            "type": "f5anything",
+            "request": "launch",
+            "command": "sudo dc-tool-ip -t 10.0.0.250 -x build/ChaoGen.elf",
+            "preLaunchTask": "CMake: build"
+        }
+    ]
+}
+//dc-tool-ip -c -t 192.168.1.100 -x mygame.elf

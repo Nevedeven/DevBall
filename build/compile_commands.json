@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/neved/Documents/GitHub/DevBall/build",
+  "command": "/opt/toolchains/dc/kos/utils/build_wrappers/kos-cc --sysroot=/opt/toolchains/dc/kos/../kos-ports -I/opt/toolchains/dc/kos/../kos-ports/include/raylib -g -DFRAME_POINTERS -fno-omit-frame-pointer -std=gnu2x -o CMakeFiles/ChaoGen.dir/main.c.obj -c /home/neved/Documents/GitHub/DevBall/main.c",
+  "file": "/home/neved/Documents/GitHub/DevBall/main.c"
+},
+{
+  "directory": "/home/neved/Documents/GitHub/DevBall/build",
+  "command": "/opt/toolchains/dc/kos/utils/build_wrappers/kos-cc --sysroot=/opt/toolchains/dc/kos/../kos-ports -I/opt/toolchains/dc/kos/../kos-ports/include/raylib -g -DFRAME_POINTERS -fno-omit-frame-pointer -std=gnu2x -o CMakeFiles/ChaoGen.dir/romdisk_tmp.c.obj -c /home/neved/Documents/GitHub/DevBall/build/romdisk_tmp.c",
+  "file": "/home/neved/Documents/GitHub/DevBall/build/romdisk_tmp.c"
+}
+]
